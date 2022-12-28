@@ -1,15 +1,15 @@
 import React from 'react';
 import "./Share.css";
-import {PermMedia, Label,Room, EmojiEmotions} from "@mui/icons-material"
+import {PermMedia, Label,Room, EmojiEmotions, IosShare} from "@mui/icons-material"
 
 const Share = () => {
     return (
         <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfileImg" src="/assets/person/1.jpeg" alt="" />
+          <img className="shareProfileImg" src="/Asset/person/1.jpg" alt="" />
           <input
-            placeholder="What's in your mind Safak?"
+            placeholder="What's in your mind Saima Sawrin?"
             className="shareInput"
           />
         </div>
@@ -33,7 +33,8 @@ const Share = () => {
                     <span className="shareOptionText">Feelings</span>
                 </div>
             </div>
-            <button className="shareButton">Share</button>
+         
+            <button className="shareButton"> <IosShare></IosShare> Share</button>
         </div>
       </div>
     </div>

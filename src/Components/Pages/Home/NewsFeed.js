@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaCamera} from 'react-icons/fa';
+import Share from '../Share/Share';
 import Post from './Post/Post';
 
 const NewsFeed = () => {
@@ -12,7 +13,7 @@ const NewsFeed = () => {
     return (
       <div className="feed">
       <div className="feedWrapper">
-        {/* <Share /> */}
+       <Share></Share>
         {posts?.map((post) => (
           <Post key={post.id} post={post} />
         ))}

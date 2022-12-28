@@ -6,7 +6,7 @@ const NavBar = () => {
       
         return (
           <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-            <div className="relative flex items-center justify-between">
+            <div className="relative flex items-center justify-between #5065A8 text-blue-900">
               <a
                 href="/"
                 aria-label="Company"
@@ -15,7 +15,7 @@ const NavBar = () => {
               >
                 <img src={logo} className="w-24 text-deep-purple-accent-400" alt="" />
               
-                <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                <span className="ml-2 text-xl font-bold tracking-wide  uppercase">
                   Face Club
                 </span>
               </a>
@@ -25,7 +25,7 @@ const NavBar = () => {
                     href="/"
                     aria-label="Our product"
                     title="Our product"
-                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     Media
                   </a>
@@ -35,7 +35,7 @@ const NavBar = () => {
                     href="/"
                     aria-label="Our product"
                     title="Our product"
-                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     Message
                   </a>
@@ -46,7 +46,7 @@ const NavBar = () => {
                     href="/"
                     aria-label="About us"
                     title="About us"
-                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     About us
                   </a>
@@ -54,7 +54,7 @@ const NavBar = () => {
                 <li>
                   <a
                     href="/"
-                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Sign up"
                     title="Sign up"
                   >
@@ -97,7 +97,7 @@ const NavBar = () => {
                           >
                                <img src={logo} className="w-24 text-deep-purple-accent-400" alt="" />
               
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+              <span className="ml-2 text-xl font-bold tracking-wide text-blue-800 uppercase">
                 Face Club
               </span>
                           </a>
@@ -135,7 +135,7 @@ const NavBar = () => {
                               href="/"
                               aria-label="Our product"
                               title="Our product"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                              className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                               Message
                             </a>
@@ -146,7 +146,7 @@ const NavBar = () => {
                               href="/"
                               aria-label="About us"
                               title="About us"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                              className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                               About us
                             </a>
@@ -154,7 +154,7 @@ const NavBar = () => {
                           <li>
                             <a
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-blue-900 text-blue-900 hover:bg-blue-900 focus:shadow-outline focus:outline-none"
                               aria-label="Sign up"
                               title="Sign up"
                             >
