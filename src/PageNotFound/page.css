@@ -1,0 +1,9 @@
+.error{
+    justify-content: center;
+    align-items: center;
+    
+}
+.error img{
+    max-height: 780px;
+    margin-left: 7%;
+}
