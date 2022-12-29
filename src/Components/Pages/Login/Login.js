@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import img from '../../../assets/img/login.png';
+import img from '../../../Asset/login.png';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import {  Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../context/AuthProvider';
+import { AuthContext } from '../../../Context/AuthProvider';
 import { FaGoogle , FaGithub } from "react-icons/fa";
-
+import './Login.css';
 const Login = () => {
     const {LogIn , signIN , loading} = useContext(AuthContext)
  

@@ -1,3 +1,4 @@
+import { Link } from '@mui/material';
 import React, { useState } from 'react';
 import logo from '../../Asset/logo.png';
 const NavBar = () => {
@@ -53,10 +54,11 @@ const NavBar = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
-                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    aria-label="Sign up"
-                    title="Sign up"
+                   href="/signup"
+            
+                    className="text-decoration-none inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    // aria-label="Sign up"
+                    // title="Sign up"
                   >
                     Sign up
                   </a>
@@ -152,14 +154,14 @@ const NavBar = () => {
                             </a>
                           </li>
                           <li>
-                            <a
+                            <Link to='/signup'
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-blue-900 text-blue-900 hover:bg-blue-900 focus:shadow-outline focus:outline-none"
+                              className="text-decoration-none inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-blue-900 text-blue-900 hover:bg-blue-900 focus:shadow-outline focus:outline-none"
                               aria-label="Sign up"
                               title="Sign up"
                             >
                               Sign up
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </nav>
