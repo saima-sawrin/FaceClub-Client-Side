@@ -13,7 +13,7 @@ const SignUp = () => {
    
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/home';
    
      const handleSubmit = event => {
          event.preventDefault();

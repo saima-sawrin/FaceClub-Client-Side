@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import About from '../Components/Pages/About/About';
 import Home from '../Components/Pages/Home/Home';
 import Login from '../Components/Pages/Login/Login';
 
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
+                element : <SignUp></SignUp>
+            },
+            {
+                path: '/home',
                 element : <Home></Home>
                 
             },
@@ -31,8 +36,8 @@ const router = createBrowserRouter([
                 
             },
             {
-                path: '/',
-                loader:()=>fetch('http://localhost:5000/post'),
+                path: '/home',
+                loader:()=>fetch('https://face-club-server-side.vercel.app/post'),
                 element : <Share></Share>
                 
             },
@@ -40,6 +45,12 @@ const router = createBrowserRouter([
                 path: '/media',
               
                 element: <MediaPost></MediaPost>
+                
+            },
+            {
+                path: '/about',
+              
+                element: <About></About>
                 
             }
           

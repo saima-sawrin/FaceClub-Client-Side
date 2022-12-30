@@ -82,3 +82,15 @@
       font-weight: 500;
       cursor: pointer;
   }
+  .infoForm{
+    width: 50%;
+    padding-left: 50px;
+    margin: auto;
+    border: 1px #42b72a;
+    
+  }
+  .Model{
+    width: 40%;
+    margin: auto;
+    padding-left: 50px;
+  }

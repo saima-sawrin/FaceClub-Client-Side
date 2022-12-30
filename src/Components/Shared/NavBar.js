@@ -15,7 +15,7 @@ const NavBar = () => {
           <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between #5065A8 text-blue-900">
               <a
-                href="/"
+                href="/home"
                 aria-label="Company"
                 title="Company"
                 className="inline-flex items-center"
@@ -39,7 +39,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/message"
                     aria-label="Our product"
                     title="Our product"
                     className="text-decoration-none  font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -50,12 +50,12 @@ const NavBar = () => {
                 
                 <li>
                   <a
-                    href="/"
-                    aria-label="About us"
-                    title="About us"
+                    href="/about"
+                    aria-label="About"
+                    title="About"
                     className=" text-decoration-none  font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
-                    About us
+                    About
                   </a>
                 </li>
                 <li>
@@ -64,7 +64,7 @@ const NavBar = () => {
               user?.uid ?
               <div className="items-center flex-shrink-0 hidden lg:flex "> 
                   
-				  <button  onClick={handleLogOut}>Log out</button>
+				   <a href='/login'>  <button  onClick={handleLogOut}>Log out</button></a>
 				  
               </div>
               :
@@ -137,18 +137,18 @@ const NavBar = () => {
                       <nav>
                         <ul className="space-y-4">
                           <li>
-                            <Link
-                              to="/media"
+                            <a
+                              href="/media"
                               aria-label="Our product"
                               title="Our product"
                               className="text-decoration-none font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                               Media
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <a
-                              href="/"
+                              href="/message"
                               aria-label="Our product"
                               title="Our product"
                               className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -159,23 +159,23 @@ const NavBar = () => {
                          
                           <li>
                             <a
-                              href="/"
+                              href="/about"
                               aria-label="About us"
                               title="About us"
                               className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                              About us
+                              About
                             </a>
                           </li>
                           <li>
-                            <Link to='/signup'
+                            <a href='/signup'
                         
                               className="text-decoration-none inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-blue-900 text-blue-900 hover:bg-blue-900 focus:shadow-outline focus:outline-none"
                               aria-label="Sign up"
                               title="Sign up"
                             >
                               Sign up
-                            </Link>
+                            </a>
                           </li>
                         </ul>
                       </nav>

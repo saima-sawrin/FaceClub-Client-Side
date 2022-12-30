@@ -10,7 +10,7 @@ const Share = () => {
   
   const [posts , setPosts] = useState();
   useEffect(()=>{
-      fetch('http://localhost:5000/post')
+      fetch('https://face-club-server-side.vercel.app/post')
       .then(res=> res.json())
       .then(data => setPosts(data))
   },[])
@@ -31,7 +31,7 @@ const post = {
 
 
 }
-    fetch('http://localhost:5000/post',{
+    fetch('https://face-club-server-side.vercel.app/post',{
         method:'POST',
         headers: {
             'Content-Type': 'application/json',
