@@ -13,7 +13,8 @@ const NewsFeed = () => {
     return (
       <div className="feed">
       <div className="feedWrapper">
-       <Share></Share>
+      <Share></Share>
+    
         {posts?.map((post) => (
           <Post key={post.id} post={post} />
         ))}

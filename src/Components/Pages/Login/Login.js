@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react';
 import img from '../../../Asset/login.png';
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 import {  Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
-import { FaGoogle , FaGithub } from "react-icons/fa";
 import './Login.css';
 const Login = () => {
-    const {LogIn , signIN , loading} = useContext(AuthContext)
+    const {LogIn , signIn , loading} = useContext(AuthContext)
  
  const googleProvider = new GoogleAuthProvider();
  const[error , setError] = useState('');
@@ -50,7 +49,7 @@ const Login = () => {
     
  }
  const handleSignIn = () =>{
-    signIN(googleProvider)
+    signIn(googleProvider)
     .then(result=> {
       const user = result.user;
      
@@ -81,6 +80,7 @@ const Login = () => {
               <button className="loginRegisterButton">
                <Link to='/signup'> Create a New Account</Link>
               </button>
+              <p className='text-red-500'>{error}</p>
             </div>
            </form>
           </div>

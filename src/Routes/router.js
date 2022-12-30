@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Components/Pages/Home/Home';
-import NewsFeed from '../Components/Pages/Home/NewsFeed';
 import Login from '../Components/Pages/Login/Login';
-import Media from '../Components/Pages/Media/Media';
+
 import MediaPost from '../Components/Pages/Media/MediaPost';
+import Share from '../Components/Pages/Share/Share';
 import SignUp from '../Components/Pages/SignUp/SignUp';
-import NavBar from '../Components/Shared/NavBar';
+
 import Main from '../Layout/Main';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
@@ -31,8 +31,14 @@ const router = createBrowserRouter([
                 
             },
             {
+                path: '/',
+                loader:()=>fetch('http://localhost:5000/post'),
+                element : <Share></Share>
+                
+            },
+            {
                 path: '/media',
-                // element : <NewsFeed></NewsFeed>
+              
                 element: <MediaPost></MediaPost>
                 
             }

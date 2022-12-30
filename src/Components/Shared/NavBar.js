@@ -1,10 +1,16 @@
 import { Link } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../../Asset/logo.png';
+import { AuthContext } from '../../Context/AuthProvider';
 const NavBar = () => {
 
         const [isMenuOpen, setIsMenuOpen] = useState(false);
-      
+        const {user , LogOut} = useContext(AuthContext);
+        const handleLogOut =()=>{
+          LogOut()
+          .then(()=>{})
+          .catch(error => console.error(error))
+          }
         return (
           <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between #5065A8 text-blue-900">
@@ -53,15 +59,23 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                   href="/signup"
+                <>
+            {
+              user?.uid ?
+              <div className="items-center flex-shrink-0 hidden lg:flex "> 
+                  
+				  <button  onClick={handleLogOut}>Log out</button>
+				  
+              </div>
+              :
+              <div  className="items-center flex-shrink-0 hidden lg:flex">
+                 <a href='/login'><button className=" text-decoration-none  font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400">Sign in</button></a>
+                  <a className=" text-decoration-none  font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400" href='/signup'><button className="self-center px-8 py-3 font-semibold rounded">Sign up</button></a>
+              </div>
+          }
+	
+          </>
             
-                    className="text-decoration-none inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    // aria-label="Sign up"
-                    // title="Sign up"
-                  >
-                    Sign up
-                  </a>
                 </li>
               </ul>
               <div className="lg:hidden">
