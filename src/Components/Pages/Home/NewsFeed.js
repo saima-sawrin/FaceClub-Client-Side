@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FaCamera} from 'react-icons/fa';
+
 import Share from '../Share/Share';
 import Post from './Post/Post';
 
 const NewsFeed = () => {
   const [posts , setPosts] = useState();
   useEffect(()=>{
-      fetch('Posts.json')
+      fetch('http://localhost:5000/allPost')
       .then(res=> res.json())
       .then(data => setPosts(data))
   },[])
@@ -18,6 +18,7 @@ const NewsFeed = () => {
           <Post key={post.id} post={post} />
         ))}
       </div>
+  
     </div>
    
       );

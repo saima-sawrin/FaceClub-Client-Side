@@ -13,7 +13,7 @@ const Post = ({post}) => {
     useEffect(()=>{
         fetch('Users.json')
         .then(res=> res.json())
-        .then(data => console.log(data))
+        .then(data => setUsers(data))
     },[])
 
     return (
@@ -23,7 +23,7 @@ const Post = ({post}) => {
             <div className="postTopLeft">
               <img
                 className="postProfileImg"
-                // src={Users.profilePicture}
+                src={Users?.filter((u) => u.id === post.userId)[0].profilePicture}
                 alt=""
               />
               <span className="postUsername">

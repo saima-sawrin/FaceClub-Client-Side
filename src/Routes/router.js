@@ -2,6 +2,8 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Components/Pages/Home/Home';
 import Login from '../Components/Pages/Login/Login';
+import Media from '../Components/Pages/Media/Media';
+import MediaPost from '../Components/Pages/Media/MediaPost';
 import SignUp from '../Components/Pages/SignUp/SignUp';
 import NavBar from '../Components/Shared/NavBar';
 import Main from '../Layout/Main';
@@ -25,6 +27,11 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element : <Login></Login>
+                
+            },
+            {
+                path: '/media',
+                element : <MediaPost></MediaPost>
                 
             }
           

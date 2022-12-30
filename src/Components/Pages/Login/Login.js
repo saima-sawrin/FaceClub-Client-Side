@@ -9,7 +9,6 @@ const Login = () => {
     const {LogIn , signIN , loading} = useContext(AuthContext)
  
  const googleProvider = new GoogleAuthProvider();
- const githubProvider = new GithubAuthProvider()
  const[error , setError] = useState('');
  const navigate = useNavigate();
  const location = useLocation();
@@ -61,59 +60,32 @@ const Login = () => {
     .catch(error => 
         console.error(error))
   }
-  const handleGithub=()=>{
-      signIN(githubProvider)
-   .then(result=>{
-       console.log(result.user)
-       navigate(from, {replace: true});
-       
-     })
-     .catch( error => {
-        alert(error)
-        setError(error.message)
-
-    });
-   }
+ 
+   
     return (
-            <div className="hero w-full my-20">
-            <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
-             
-            <div className="text-center lg:text-left">
-                    <img className='w-full' src={img} alt="" />
-                </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
-                    <h1 className="text-5xl text-center font-bold">Login</h1>
-                    <form onSubmit={handleSubmit} className="card-body">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type="text" name='password' placeholder="password" className="input input-bordered" />
-                           
-                        </div>
-                        <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Login" />
-                        </div>
-                        <p className='text-center'>New to Beauty Salon? <Link className='font-bold' to="/signup">Sign Up</Link> </p>
-                     <div className=' mb-2'>
-                    
-                  <button onClick={handleSignIn}  className="d-inline btn btn-block  border-0 bg-gradient-to-r from-purple-500 to-pink-500 mb-2 " variant='outline-primary'> <FaGoogle className='text-yellow-400'></FaGoogle>  Log in with Google</button>
-                     <br />
-                     <button onClick={handleGithub}  className="mb-2  btn border-0 btn-block bg-gradient-to-r from-violet-500 to-fuchsia-500" variant='outline-primary'><FaGithub className='text-yellow-400'></FaGithub>  Log in with Github</button>
-                     </div>
-                     <p className='text-red-500'>{error}</p>
-                    </form>
-                    
-                </div>
-
+        <div className="login">
+        <div className="loginWrapper">
+          <div className="loginLeft">
+          <div className="loginLeft">
+            <img src={img} alt="" />
+          </div>
+          </div>
+          <div className="loginRight">
+           <form onSubmit={handleSubmit}>
+           <div className="loginBox">
+              <input name='email' placeholder="Email" className="loginInput" />
+              <input name='password' placeholder="Password" className="loginInput" />
+              <button className="loginButton">Log In</button>
+              <span className="loginForgot">Forgot Password?</span>
+              <button onClick={handleSignIn} className="loginButton"> Sign in With Google</button>
+              <button className="loginRegisterButton">
+               <Link to='/signup'> Create a New Account</Link>
+              </button>
             </div>
+           </form>
+          </div>
         </div>
+      </div>
     );
     };
 export default Login;

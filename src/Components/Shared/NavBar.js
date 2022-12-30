@@ -23,10 +23,10 @@ const NavBar = () => {
               <ul className="flex items-center hidden space-x-8 lg:flex">
                 <li>
                   <a
-                    href="/"
+                   href='/media'
                     aria-label="Our product"
                     title="Our product"
-                    className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="text-decoration-none  font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     Media
                   </a>
@@ -36,7 +36,7 @@ const NavBar = () => {
                     href="/"
                     aria-label="Our product"
                     title="Our product"
-                    className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="text-decoration-none  font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     Message
                   </a>
@@ -47,7 +47,7 @@ const NavBar = () => {
                     href="/"
                     aria-label="About us"
                     title="About us"
-                    className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className=" text-decoration-none  font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
                     About us
                   </a>
@@ -123,14 +123,14 @@ const NavBar = () => {
                       <nav>
                         <ul className="space-y-4">
                           <li>
-                            <a
-                              href="/"
+                            <Link
+                              to="/media"
                               aria-label="Our product"
                               title="Our product"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                              className="text-decoration-none font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                               Media
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <a
@@ -155,7 +155,7 @@ const NavBar = () => {
                           </li>
                           <li>
                             <Link to='/signup'
-                              href="/"
+                        
                               className="text-decoration-none inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-blue-900 text-blue-900 hover:bg-blue-900 focus:shadow-outline focus:outline-none"
                               aria-label="Sign up"
                               title="Sign up"
