@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Components/Pages/Home/Home';
+import NewsFeed from '../Components/Pages/Home/NewsFeed';
 import Login from '../Components/Pages/Login/Login';
 import Media from '../Components/Pages/Media/Media';
 import MediaPost from '../Components/Pages/Media/MediaPost';
@@ -31,7 +32,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/media',
-                element : <MediaPost></MediaPost>
+                // element : <NewsFeed></NewsFeed>
+                element: <MediaPost></MediaPost>
                 
             }
           

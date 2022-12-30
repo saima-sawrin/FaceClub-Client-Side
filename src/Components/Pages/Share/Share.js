@@ -9,7 +9,7 @@ const Share = () => {
         <div className="shareTop">
           <img className="shareProfileImg" src="/Asset/person/1.jpg" alt="" />
           <input
-            placeholder="What's in your mind Saima Sawrin?"
+            placeholder="What's in your mind ?"
             className="shareInput"
           />
         </div>
@@ -18,7 +18,7 @@ const Share = () => {
             <div className="shareOptions">
                 <div className="shareOption">
                     <PermMedia htmlColor="tomato" className="shareIcon"/>
-                    <span className="shareOptionText">Photo or Video</span>
+                    <span className="shareOptionText"><button>Photo or Video</button></span>
                 </div>
                 <div className="shareOption">
                     <Label htmlColor="blue" className="shareIcon"/>
